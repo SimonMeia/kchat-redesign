@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="162" viewBox="0 0 1120 162" role="img" aria-label="Palette bleue kChat de 50 à 950">
+<rect width="1120" height="162" rx="12" fill="#ffffff"/>
+<rect x="20" y="16" width="84" height="74" rx="8" fill="#ecf2ff" stroke="#e0e3ef"/>
+<text x="20" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 50</text>
+<text x="20" y="136" font-family="monospace" font-size="12" fill="#646b83">#ecf2ff</text>
+<rect x="120" y="16" width="84" height="74" rx="8" fill="#dde8ff" stroke="#e0e3ef"/>
+<text x="120" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 100</text>
+<text x="120" y="136" font-family="monospace" font-size="12" fill="#646b83">#dde8ff</text>
+<rect x="220" y="16" width="84" height="74" rx="8" fill="#c2d3ff" stroke="#e0e3ef"/>
+<text x="220" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 200</text>
+<text x="220" y="136" font-family="monospace" font-size="12" fill="#646b83">#c2d3ff</text>
+<rect x="320" y="16" width="84" height="74" rx="8" fill="#9cb5ff" stroke="#e0e3ef"/>
+<text x="320" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 300</text>
+<text x="320" y="136" font-family="monospace" font-size="12" fill="#646b83">#9cb5ff</text>
+<rect x="420" y="16" width="84" height="74" rx="8" fill="#758dff" stroke="#e0e3ef"/>
+<text x="420" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 400</text>
+<text x="420" y="136" font-family="monospace" font-size="12" fill="#646b83">#758dff</text>
+<rect x="520" y="16" width="84" height="74" rx="8" fill="#5567ff" stroke="#e0e3ef"/>
+<text x="520" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 500</text>
+<text x="520" y="136" font-family="monospace" font-size="12" fill="#646b83">#5567ff</text>
+<rect x="620" y="16" width="84" height="74" rx="8" fill="#3c41f5" stroke="#e0e3ef"/>
+<text x="620" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 600</text>
+<text x="620" y="136" font-family="monospace" font-size="12" fill="#646b83">#3c41f5</text>
+<rect x="720" y="16" width="84" height="74" rx="8" fill="#2a2bd8" stroke="#e0e3ef"/>
+<text x="720" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 700</text>
+<text x="720" y="136" font-family="monospace" font-size="12" fill="#646b83">#2a2bd8</text>
+<rect x="820" y="16" width="84" height="74" rx="8" fill="#2528ae" stroke="#e0e3ef"/>
+<text x="820" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 800</text>
+<text x="820" y="136" font-family="monospace" font-size="12" fill="#646b83">#2528ae</text>
+<rect x="920" y="16" width="84" height="74" rx="8" fill="#262b89" stroke="#e0e3ef"/>
+<text x="920" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 900</text>
+<text x="920" y="136" font-family="monospace" font-size="12" fill="#646b83">#262b89</text>
+<rect x="1020" y="16" width="84" height="74" rx="8" fill="#161750" stroke="#e0e3ef"/>
+<text x="1020" y="115" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#25283d">Blue 950</text>
+<text x="1020" y="136" font-family="monospace" font-size="12" fill="#646b83">#161750</text>
+</svg>

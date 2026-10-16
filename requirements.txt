@@ -1,0 +1,2 @@
+# Version utilisée et vérifiée sur l'installation d'origine (Python 3.12).
+websockets==10.4

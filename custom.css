@@ -1,0 +1,662 @@
+/* kChat · Atelier — palette indigo, marque #3c41f5.
+   Modifier ce fichier recharge le thème sans redémarrage. */
+:root {
+  --kc-font: "SuisseIntl", "Segoe UI", "Ubuntu", sans-serif;
+  --kc-blue-50: #ecf2ff;
+  --kc-blue-100: #dde8ff;
+  --kc-blue-200: #c2d3ff;
+  --kc-blue-300: #9cb5ff;
+  --kc-blue-400: #758dff;
+  --kc-blue-500: #5567ff;
+  --kc-blue-600: #3c41f5;
+  --kc-blue-700: #2a2bd8;
+  --kc-blue-800: #2528ae;
+  --kc-blue-900: #262b89;
+  --kc-blue-950: #161750;
+  --kc-brand: var(--kc-blue-600);
+  --kc-brand-rgb: 60, 65, 245;
+  --kc-canvas: #f6f7fc;
+  --kc-conversation: #ffffff;
+  --kc-surface: #ffffff;
+  --kc-surface-rgb: 255, 255, 255;
+  --kc-raised: #ffffff;
+  --kc-hover: var(--kc-blue-50);
+  --kc-text: #25283d;
+  --kc-text-rgb: 37, 40, 61;
+  --kc-muted: #646b83;
+  --kc-border: #e0e3ef;
+  --kc-accent: var(--kc-brand);
+  --kc-accent-rgb: var(--kc-brand-rgb);
+  --kc-accent-soft: var(--kc-blue-50);
+  --kc-accent-soft-rgb: 236, 242, 255;
+  --kc-on-accent: #ffffff;
+  --kc-on-accent-rgb: 255, 255, 255;
+  --kc-shadow: 0 8px 28px rgb(31 35 70 / 7%);
+  --kc-popup-shadow: 0 18px 60px rgb(24 28 60 / 17%);
+  --kc-sidebar: #222536;
+  --kc-sidebar-rgb: 34, 37, 54;
+  --kc-sidebar-text: #d7dced;
+  --kc-sidebar-text-rgb: 215, 220, 237;
+  --kc-sidebar-unread: var(--kc-blue-200);
+  --kc-sidebar-unread-rgb: 194, 211, 255;
+  --kc-sidebar-muted: #a0a8c2;
+  --kc-sidebar-hover: #2d324a;
+  --kc-sidebar-hover-rgb: 45, 50, 74;
+  --kc-sidebar-active: var(--kc-blue-900);
+  --kc-sidebar-accent: var(--kc-sidebar-text);
+  --kc-sidebar-accent-rgb: var(--kc-sidebar-text-rgb);
+  --kc-rail: #191c2b;
+  --kc-rail-rgb: 25, 28, 43;
+}
+:root[data-kchat-appearance="dark"] {
+  --kc-canvas: #171925;
+  --kc-conversation: var(--kc-canvas);
+  --kc-surface: #202331;
+  --kc-surface-rgb: 32, 35, 49;
+  --kc-raised: #292d3e;
+  --kc-hover: #2d3248;
+  --kc-text: #e6e9f5;
+  --kc-text-rgb: 230, 233, 245;
+  --kc-muted: #a5aec8;
+  --kc-border: #3b425b;
+  --kc-accent: var(--kc-blue-300);
+  --kc-accent-rgb: 156, 181, 255;
+  --kc-accent-soft: var(--kc-blue-950);
+  --kc-accent-soft-rgb: 22, 23, 80;
+  --kc-shadow: 0 8px 28px rgb(10 13 30 / 18%);
+  --kc-popup-shadow: 0 18px 60px rgb(10 13 30 / 36%);
+}
+:root[data-kchat-sidebar="light"] {
+  --kc-sidebar: #f2f2f2;
+  --kc-sidebar-rgb: 242, 242, 242;
+  --kc-sidebar-text: #3d4561;
+  --kc-sidebar-text-rgb: 61, 69, 97;
+  --kc-sidebar-unread: var(--kc-blue-700);
+  --kc-sidebar-unread-rgb: 42, 43, 216;
+  --kc-sidebar-muted: #5a6580;
+  --kc-sidebar-hover: var(--kc-blue-100);
+  --kc-sidebar-hover-rgb: 221, 232, 255;
+  --kc-sidebar-active: var(--kc-blue-200);
+  --kc-sidebar-accent: var(--kc-sidebar-text);
+  --kc-sidebar-accent-rgb: var(--kc-sidebar-text-rgb);
+  --kc-rail: var(--kc-surface);
+  --kc-rail-rgb: var(--kc-surface-rgb);
+}
+
+/* Tokens natifs : menus, recherches, fils et fenêtres héritent du thème. */
+:root {
+  --font-family: var(--kc-font) !important;
+  --center-channel-bg: var(--kc-surface) !important;
+  --center-channel-bg-rgb: var(--kc-surface-rgb) !important;
+  --center-channel-color: var(--kc-text) !important;
+  --center-channel-color-rgb: var(--kc-text-rgb) !important;
+  --link-color: var(--kc-accent) !important;
+  --link-color-rgb: var(--kc-accent-rgb) !important;
+  --button-bg: var(--kc-brand) !important;
+  --button-bg-rgb: var(--kc-brand-rgb) !important;
+  --button-color: var(--kc-on-accent) !important;
+  --button-color-rgb: var(--kc-on-accent-rgb) !important;
+  --sidebar-bg: var(--kc-sidebar) !important;
+  --sidebar-bg-rgb: var(--kc-sidebar-rgb) !important;
+  --sidebar-header-bg: var(--kc-rail) !important;
+  --sidebar-header-bg-rgb: var(--kc-rail-rgb) !important;
+  --sidebar-teambar-bg: var(--kc-rail) !important;
+  --sidebar-teambar-bg-rgb: var(--kc-rail-rgb) !important;
+  --sidebar-text: var(--kc-sidebar-text) !important;
+  --sidebar-text-rgb: var(--kc-sidebar-text-rgb) !important;
+  --sidebar-unread-text: var(--kc-sidebar-unread) !important;
+  --sidebar-unread-text-rgb: var(--kc-sidebar-unread-rgb) !important;
+  --sidebar-header-text-color: var(--kc-sidebar-text) !important;
+  --sidebar-header-text-color-rgb: var(--kc-sidebar-text-rgb) !important;
+  --sidebar-text-active-border: var(--kc-sidebar-accent) !important;
+  --sidebar-text-active-border-rgb: var(--kc-sidebar-accent-rgb) !important;
+  --sidebar-text-active-color: var(--kc-sidebar-accent) !important;
+  --sidebar-text-active-color-rgb: var(--kc-sidebar-accent-rgb) !important;
+  --sidebar-text-hover-bg: var(--kc-sidebar-hover) !important;
+  --sidebar-text-hover-bg-rgb: var(--kc-sidebar-hover-rgb) !important;
+  --denim-button-bg: var(--kc-brand) !important;
+  --denim-button-bg-rgb: var(--kc-brand-rgb) !important;
+  --mention-bg: var(--kc-accent-soft) !important;
+  --mention-bg-rgb: var(--kc-accent-soft-rgb) !important;
+  --mention-color: var(--kc-accent) !important;
+  --mention-color-rgb: var(--kc-accent-rgb) !important;
+  --mention-highlight-bg: var(--kc-accent-soft) !important;
+  --mention-highlight-bg-rgb: var(--kc-accent-soft-rgb) !important;
+  --mention-highlight-bg-mixed-rgb: var(--kc-accent-soft-rgb) !important;
+  --pinned-highlight-bg-mixed-rgb: var(--kc-accent-soft-rgb) !important;
+  --own-highlight-bg-rgb: var(--kc-accent-soft-rgb) !important;
+  --mention-highlight-link-rgb: var(--kc-accent-rgb) !important;
+  --mention-highlight-link: var(--kc-accent) !important;
+  --sys-font-family: var(--kc-font) !important;
+  --sys-center-channel-bg: var(--kc-surface) !important;
+  --sys-center-channel-bg-rgb: var(--kc-surface-rgb) !important;
+  --sys-center-channel-color: var(--kc-text) !important;
+  --sys-center-channel-color-rgb: var(--kc-text-rgb) !important;
+  --sys-link-color: var(--kc-accent) !important;
+  --sys-link-color-rgb: var(--kc-accent-rgb) !important;
+  --sys-button-bg: var(--kc-brand) !important;
+  --sys-button-bg-rgb: var(--kc-brand-rgb) !important;
+  --sys-button-color: var(--kc-on-accent) !important;
+  --sys-button-color-rgb: var(--kc-on-accent-rgb) !important;
+  --sys-sidebar-bg: var(--kc-sidebar) !important;
+  --sys-sidebar-bg-rgb: var(--kc-sidebar-rgb) !important;
+  --sys-sidebar-header-bg: var(--kc-rail) !important;
+  --sys-sidebar-header-bg-rgb: var(--kc-rail-rgb) !important;
+  --sys-sidebar-teambar-bg: var(--kc-rail) !important;
+  --sys-sidebar-teambar-bg-rgb: var(--kc-rail-rgb) !important;
+  --sys-sidebar-text: var(--kc-sidebar-text) !important;
+  --sys-sidebar-text-rgb: var(--kc-sidebar-text-rgb) !important;
+  --sys-sidebar-unread-text: var(--kc-sidebar-unread) !important;
+  --sys-sidebar-unread-text-rgb: var(--kc-sidebar-unread-rgb) !important;
+  --sys-sidebar-header-text-color: var(--kc-sidebar-text) !important;
+  --sys-sidebar-header-text-color-rgb: var(--kc-sidebar-text-rgb) !important;
+  --sys-sidebar-text-active-border: var(--kc-sidebar-accent) !important;
+  --sys-sidebar-text-active-border-rgb: var(--kc-sidebar-accent-rgb) !important;
+  --sys-sidebar-text-active-color: var(--kc-sidebar-accent) !important;
+  --sys-sidebar-text-active-color-rgb: var(--kc-sidebar-accent-rgb) !important;
+  --sys-sidebar-text-hover-bg: var(--kc-sidebar-hover) !important;
+  --sys-sidebar-text-hover-bg-rgb: var(--kc-sidebar-hover-rgb) !important;
+  --sys-denim-button-bg: var(--kc-brand) !important;
+  --sys-denim-button-bg-rgb: var(--kc-brand-rgb) !important;
+  --sys-mention-bg: var(--kc-accent-soft) !important;
+  --sys-mention-color: var(--kc-accent) !important;
+  --sys-mention-color-rgb: var(--kc-accent-rgb) !important;
+  --sys-mention-highlight-bg: var(--kc-accent-soft) !important;
+  --sys-mention-highlight-link: var(--kc-accent) !important;
+  --center-channel-bg-04: rgba(var(--kc-surface-rgb), 0.04) !important;
+  --center-channel-bg-08: rgba(var(--kc-surface-rgb), 0.08) !important;
+  --center-channel-bg-16: rgba(var(--kc-surface-rgb), 0.16) !important;
+  --center-channel-bg-20: rgba(var(--kc-surface-rgb), 0.2) !important;
+  --center-channel-bg-24: rgba(var(--kc-surface-rgb), 0.24) !important;
+  --center-channel-bg-30: rgba(var(--kc-surface-rgb), 0.3) !important;
+  --center-channel-bg-32: rgba(var(--kc-surface-rgb), 0.32) !important;
+  --center-channel-bg-40: rgba(var(--kc-surface-rgb), 0.4) !important;
+  --center-channel-bg-48: rgba(var(--kc-surface-rgb), 0.48) !important;
+  --center-channel-bg-50: rgba(var(--kc-surface-rgb), 0.5) !important;
+  --center-channel-bg-56: rgba(var(--kc-surface-rgb), 0.56) !important;
+  --center-channel-bg-60: rgba(var(--kc-surface-rgb), 0.6) !important;
+  --center-channel-bg-64: rgba(var(--kc-surface-rgb), 0.64) !important;
+  --center-channel-bg-72: rgba(var(--kc-surface-rgb), 0.72) !important;
+  --center-channel-bg-80: rgba(var(--kc-surface-rgb), 0.8) !important;
+  --center-channel-bg-88: rgba(var(--kc-surface-rgb), 0.88) !important;
+  --center-channel-color-04: rgba(var(--kc-text-rgb), 0.04) !important;
+  --center-channel-color-08: rgba(var(--kc-text-rgb), 0.08) !important;
+  --center-channel-color-16: rgba(var(--kc-text-rgb), 0.16) !important;
+  --center-channel-color-20: rgba(var(--kc-text-rgb), 0.2) !important;
+  --center-channel-color-24: rgba(var(--kc-text-rgb), 0.24) !important;
+  --center-channel-color-30: rgba(var(--kc-text-rgb), 0.3) !important;
+  --center-channel-color-32: rgba(var(--kc-text-rgb), 0.32) !important;
+  --center-channel-color-40: rgba(var(--kc-text-rgb), 0.4) !important;
+  --center-channel-color-48: rgba(var(--kc-text-rgb), 0.48) !important;
+  --center-channel-color-50: rgba(var(--kc-text-rgb), 0.5) !important;
+  --center-channel-color-56: rgba(var(--kc-text-rgb), 0.56) !important;
+  --center-channel-color-60: rgba(var(--kc-text-rgb), 0.6) !important;
+  --center-channel-color-64: rgba(var(--kc-text-rgb), 0.64) !important;
+  --center-channel-color-72: rgba(var(--kc-text-rgb), 0.72) !important;
+  --center-channel-color-80: rgba(var(--kc-text-rgb), 0.8) !important;
+  --center-channel-color-88: rgba(var(--kc-text-rgb), 0.88) !important;
+  --button-bg-04: rgba(var(--kc-brand-rgb), 0.04) !important;
+  --button-bg-08: rgba(var(--kc-brand-rgb), 0.08) !important;
+  --button-bg-16: rgba(var(--kc-brand-rgb), 0.16) !important;
+  --button-bg-20: rgba(var(--kc-brand-rgb), 0.2) !important;
+  --button-bg-24: rgba(var(--kc-brand-rgb), 0.24) !important;
+  --button-bg-30: rgba(var(--kc-brand-rgb), 0.3) !important;
+  --button-bg-32: rgba(var(--kc-brand-rgb), 0.32) !important;
+  --button-bg-40: rgba(var(--kc-brand-rgb), 0.4) !important;
+  --button-bg-48: rgba(var(--kc-brand-rgb), 0.48) !important;
+  --button-bg-50: rgba(var(--kc-brand-rgb), 0.5) !important;
+  --button-bg-56: rgba(var(--kc-brand-rgb), 0.56) !important;
+  --button-bg-60: rgba(var(--kc-brand-rgb), 0.6) !important;
+  --button-bg-64: rgba(var(--kc-brand-rgb), 0.64) !important;
+  --button-bg-72: rgba(var(--kc-brand-rgb), 0.72) !important;
+  --button-bg-80: rgba(var(--kc-brand-rgb), 0.8) !important;
+  --button-bg-88: rgba(var(--kc-brand-rgb), 0.88) !important;
+  --button-color-04: rgba(var(--kc-on-accent-rgb), 0.04) !important;
+  --button-color-08: rgba(var(--kc-on-accent-rgb), 0.08) !important;
+  --button-color-16: rgba(var(--kc-on-accent-rgb), 0.16) !important;
+  --button-color-20: rgba(var(--kc-on-accent-rgb), 0.2) !important;
+  --button-color-24: rgba(var(--kc-on-accent-rgb), 0.24) !important;
+  --button-color-30: rgba(var(--kc-on-accent-rgb), 0.3) !important;
+  --button-color-32: rgba(var(--kc-on-accent-rgb), 0.32) !important;
+  --button-color-40: rgba(var(--kc-on-accent-rgb), 0.4) !important;
+  --button-color-48: rgba(var(--kc-on-accent-rgb), 0.48) !important;
+  --button-color-50: rgba(var(--kc-on-accent-rgb), 0.5) !important;
+  --button-color-56: rgba(var(--kc-on-accent-rgb), 0.56) !important;
+  --button-color-60: rgba(var(--kc-on-accent-rgb), 0.6) !important;
+  --button-color-64: rgba(var(--kc-on-accent-rgb), 0.64) !important;
+  --button-color-72: rgba(var(--kc-on-accent-rgb), 0.72) !important;
+  --button-color-80: rgba(var(--kc-on-accent-rgb), 0.8) !important;
+  --button-color-88: rgba(var(--kc-on-accent-rgb), 0.88) !important;
+  --sidebar-text-04: rgba(var(--kc-sidebar-text-rgb), 0.04) !important;
+  --sidebar-text-08: rgba(var(--kc-sidebar-text-rgb), 0.08) !important;
+  --sidebar-text-16: rgba(var(--kc-sidebar-text-rgb), 0.16) !important;
+  --sidebar-text-20: rgba(var(--kc-sidebar-text-rgb), 0.2) !important;
+  --sidebar-text-24: rgba(var(--kc-sidebar-text-rgb), 0.24) !important;
+  --sidebar-text-30: rgba(var(--kc-sidebar-text-rgb), 0.3) !important;
+  --sidebar-text-32: rgba(var(--kc-sidebar-text-rgb), 0.32) !important;
+  --sidebar-text-40: rgba(var(--kc-sidebar-text-rgb), 0.4) !important;
+  --sidebar-text-48: rgba(var(--kc-sidebar-text-rgb), 0.48) !important;
+  --sidebar-text-50: rgba(var(--kc-sidebar-text-rgb), 0.5) !important;
+  --sidebar-text-56: rgba(var(--kc-sidebar-text-rgb), 0.56) !important;
+  --sidebar-text-60: rgba(var(--kc-sidebar-text-rgb), 0.6) !important;
+  --sidebar-text-64: rgba(var(--kc-sidebar-text-rgb), 0.64) !important;
+  --sidebar-text-72: rgba(var(--kc-sidebar-text-rgb), 0.72) !important;
+  --sidebar-text-80: rgba(var(--kc-sidebar-text-rgb), 0.8) !important;
+  --sidebar-text-88: rgba(var(--kc-sidebar-text-rgb), 0.88) !important;
+  --sidebar-header-text-color-04: rgba(var(--kc-sidebar-text-rgb), 0.04) !important;
+  --sidebar-header-text-color-08: rgba(var(--kc-sidebar-text-rgb), 0.08) !important;
+  --sidebar-header-text-color-16: rgba(var(--kc-sidebar-text-rgb), 0.16) !important;
+  --sidebar-header-text-color-20: rgba(var(--kc-sidebar-text-rgb), 0.2) !important;
+  --sidebar-header-text-color-24: rgba(var(--kc-sidebar-text-rgb), 0.24) !important;
+  --sidebar-header-text-color-30: rgba(var(--kc-sidebar-text-rgb), 0.3) !important;
+  --sidebar-header-text-color-32: rgba(var(--kc-sidebar-text-rgb), 0.32) !important;
+  --sidebar-header-text-color-40: rgba(var(--kc-sidebar-text-rgb), 0.4) !important;
+  --sidebar-header-text-color-48: rgba(var(--kc-sidebar-text-rgb), 0.48) !important;
+  --sidebar-header-text-color-50: rgba(var(--kc-sidebar-text-rgb), 0.5) !important;
+  --sidebar-header-text-color-56: rgba(var(--kc-sidebar-text-rgb), 0.56) !important;
+  --sidebar-header-text-color-60: rgba(var(--kc-sidebar-text-rgb), 0.6) !important;
+  --sidebar-header-text-color-64: rgba(var(--kc-sidebar-text-rgb), 0.64) !important;
+  --sidebar-header-text-color-72: rgba(var(--kc-sidebar-text-rgb), 0.72) !important;
+  --sidebar-header-text-color-80: rgba(var(--kc-sidebar-text-rgb), 0.8) !important;
+  --sidebar-header-text-color-88: rgba(var(--kc-sidebar-text-rgb), 0.88) !important;
+  --link-color-04: rgba(var(--kc-accent-rgb), 0.04) !important;
+  --link-color-08: rgba(var(--kc-accent-rgb), 0.08) !important;
+  --link-color-16: rgba(var(--kc-accent-rgb), 0.16) !important;
+  --link-color-20: rgba(var(--kc-accent-rgb), 0.2) !important;
+  --link-color-24: rgba(var(--kc-accent-rgb), 0.24) !important;
+  --link-color-30: rgba(var(--kc-accent-rgb), 0.3) !important;
+  --link-color-32: rgba(var(--kc-accent-rgb), 0.32) !important;
+  --link-color-40: rgba(var(--kc-accent-rgb), 0.4) !important;
+  --link-color-48: rgba(var(--kc-accent-rgb), 0.48) !important;
+  --link-color-50: rgba(var(--kc-accent-rgb), 0.5) !important;
+  --link-color-56: rgba(var(--kc-accent-rgb), 0.56) !important;
+  --link-color-60: rgba(var(--kc-accent-rgb), 0.6) !important;
+  --link-color-64: rgba(var(--kc-accent-rgb), 0.64) !important;
+  --link-color-72: rgba(var(--kc-accent-rgb), 0.72) !important;
+  --link-color-80: rgba(var(--kc-accent-rgb), 0.8) !important;
+  --link-color-88: rgba(var(--kc-accent-rgb), 0.88) !important;
+  --sidebar-background: var(--kc-rail) !important;
+  --sidebar-text-color-rgb: var(--kc-sidebar-text-rgb) !important;
+  --sidebar-border-color-rgb: var(--kc-sidebar-text-rgb) !important;
+  --sidebar-team-bg: var(--kc-rail) !important;
+  --ik-modal-header: var(--kc-surface) !important;
+  --ik-background-input: var(--kc-surface) !important;
+  --ik-btn-secondary: var(--kc-hover) !important;
+  --ik-btn-secondary-color: var(--kc-muted) !important;
+  --ik-backstage-body: var(--kc-canvas) !important;
+  --ik-backstage-text: var(--kc-text) !important;
+  --ik-backstage-background: var(--kc-surface) !important;
+  --ik-box-shadow: var(--kc-shadow) !important;
+  --border-light: 1px solid rgba(var(--kc-text-rgb), 0.08) !important;
+  --border-default: 1px solid var(--kc-border) !important;
+  --border-dark: 1px solid rgba(var(--kc-text-rgb), 0.18) !important;
+  --radius-xs: 4px !important;
+  --radius-s: 6px !important;
+  --radius-m: 10px !important;
+  --radius-l: 14px !important;
+  --radius-xl: 18px !important;
+  --elevation-3: var(--kc-shadow) !important;
+  --elevation-4: var(--kc-popup-shadow) !important;
+  --elevation-5: var(--kc-popup-shadow) !important;
+  --elevation-6: var(--kc-popup-shadow) !important;
+}
+
+/* Typographie : la taille racine de kChat et les fontes d'icônes restent intactes. */
+body, input, textarea, select, button { font-family: var(--kc-font) !important; }
+body { -webkit-font-smoothing: antialiased; }
+body.app__body { color: var(--kc-text); }
+body.app__body :is(button, a, input, textarea, [tabindex]):focus-visible,
+.ServerButton:focus-visible, .topBar button:focus-visible {
+  outline: 2px solid var(--kc-accent) !important;
+  outline-offset: 3px;
+  box-shadow: none !important;
+}
+body.app__body :is(.btn, .SidebarLink, .channel-header__trigger, .control) {
+  transition: background-color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, color 160ms ease;
+}
+::selection { background: var(--kc-accent-soft); color: var(--kc-text); }
+
+/* Navigation : hauteur des lignes conservée pour les listes virtuelles. */
+#SidebarContainer {
+  background: var(--kc-sidebar) !important;
+  border-right: 1px solid rgba(var(--kc-sidebar-text-rgb), 0.07);
+}
+/* Conserver la poignée de redimensionnement sans son bloc de survol temporisé. */
+#SidebarContainer > [class*="Divider-"]::after {
+  content: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+#SidebarContainer .SidebarLink {
+  width: calc(100% - 20px) !important;
+  height: 32px;
+  padding-inline: 12px !important;
+  margin-inline: 10px;
+  border-radius: 8px;
+  color: var(--kc-sidebar-text) !important;
+}
+#SidebarContainer .SidebarLink:hover { background: var(--kc-sidebar-hover) !important; }
+#SidebarContainer :is(.SidebarChannel.active .SidebarLink, .SidebarLink.active) {
+  background: var(--kc-sidebar-active) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--kc-sidebar-text) !important;
+}
+#SidebarContainer :is(.SidebarChannel.active .SidebarLink, .SidebarLink.active) .SidebarChannelLinkLabel {
+  color: var(--kc-sidebar-text) !important;
+}
+#SidebarContainer :is(.SidebarChannel.active .SidebarLink, .SidebarLink.active)::before {
+  content: none !important;
+  display: none !important;
+}
+#SidebarContainer :is(.SidebarChannel.unread .SidebarLink, .SidebarLink.unread-title) {
+  color: var(--kc-sidebar-unread) !important;
+}
+#SidebarContainer :is(.SidebarChannel.unread .SidebarLink, .SidebarLink.unread-title) .SidebarChannelLinkLabel {
+  color: var(--kc-sidebar-unread) !important;
+  font-weight: 700;
+}
+#SidebarContainer :is(.SidebarChannel.unread .SidebarLink, .SidebarLink.unread-title) > .icon {
+  color: var(--kc-sidebar-unread) !important;
+  opacity: 1;
+}
+#SidebarContainer :is(.SidebarChannel.unread .SidebarLink, .SidebarLink.unread-title) > svg {
+  fill: var(--kc-sidebar-unread) !important;
+}
+#SidebarContainer .SidebarChannelGroupHeader { background: var(--kc-sidebar) !important; }
+#SidebarContainer .SidebarChannelGroupHeader_groupButton {
+  padding-inline: 12px !important;
+  color: var(--kc-sidebar-muted) !important;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: none !important;
+}
+#SidebarContainer .SidebarChannelLinkLabel { font-size: 13px; letter-spacing: 0.005em; }
+#sidebarDropdownMenuButton .title {
+  color: var(--kc-sidebar-text) !important;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+#SidebarChannelNavigatorButton, #SidebarContainer .SidebarFilters {
+  border: 1px solid rgba(var(--kc-sidebar-text-rgb), 0.08) !important;
+  border-radius: 7px !important;
+  background: rgba(var(--kc-sidebar-text-rgb), 0.06) !important;
+  color: var(--kc-sidebar-muted) !important;
+}
+#SidebarChannelNavigatorButton:hover {
+  background: var(--kc-sidebar-hover) !important;
+  color: var(--kc-sidebar-text) !important;
+}
+#SidebarContainer .nav-pills__unread-indicator {
+  background: var(--kc-brand) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(var(--kc-brand-rgb), 0.22);
+  font-weight: 600;
+}
+#SidebarContainer .nav-pills__unread-indicator:hover {
+  background: var(--kc-blue-700) !important;
+}
+#SidebarContainer .nav-pills__unread-indicator svg {
+  fill: currentColor !important;
+}
+#SidebarContainer :is(.SidebarChannelGroup, .SidebarGlobalThreads, .SidebarInsights) .badge {
+  min-width: 20px;
+  height: 20px;
+  padding-inline: 6px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--kc-brand) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 20px;
+}
+
+/* Bandeau global et en-tête du canal. */
+#global-header {
+  border-bottom: 1px solid var(--kc-border) !important;
+  background: var(--kc-surface) !important;
+}
+#global-header [class*="LeftControlsContainer-"] { background: var(--kc-sidebar) !important; }
+#global-header [class*="CenterControlsContainer-"] { background: var(--kc-surface) !important; }
+
+/* Sidebar en îlot : la colonne garde sa largeur et sa poignée de redimensionnement. */
+@media (min-width: 769px) {
+  body.app__body #root .main-wrapper:has(> #SidebarContainer) {
+    background: var(--kc-surface) !important;
+  }
+  #SidebarContainer {
+    padding: 12px;
+    border: 0;
+    background: transparent !important;
+  }
+  #SidebarContainer::before {
+    position: absolute;
+    z-index: -1;
+    inset: 12px;
+    border-radius: 18px;
+    background: var(--kc-sidebar);
+    pointer-events: none;
+    content: "";
+  }
+  #SidebarContainer #sidebar-left {
+    overflow: hidden;
+    border-radius: 0 0 18px 18px;
+  }
+  #SidebarContainer > [class*="Divider-"] {
+    top: 12px;
+    right: 0;
+    height: calc(100% - 24px);
+  }
+  #global-header [class*="LeftControlsContainer-"] {
+    height: 46px;
+    background: var(--kc-surface) !important;
+  }
+  #global-header .ik-app-branding__logo {
+    width: 28px;
+    height: 28px;
+  }
+}
+#searchFormContainer {
+  min-height: 30px;
+  padding-inline: 10px !important;
+  border: 1px solid var(--kc-border) !important;
+  border-radius: 8px !important;
+  background: var(--kc-canvas) !important;
+  color: var(--kc-muted) !important;
+}
+#global-header :is(.icon-magnify, #RightControlsContainer button, .header-icon) { color: var(--kc-muted) !important; }
+#channel-header {
+  padding-inline: 22px;
+  border-bottom: 1px solid var(--kc-border) !important;
+  background: var(--kc-surface) !important;
+}
+#channel-header .channel-header__trigger { border-radius: 7px; }
+#channel-header .channel-header__title { letter-spacing: -0.02em; }
+#channelHeaderDropdownButton { color: var(--kc-text) !important; font-size: 16px; font-weight: 650; }
+
+/* Conversations : fond blanc en mode clair et pièces jointes lisibles. */
+#post-list, #post-list .post-list-holder-by-time,
+.ThreadViewer .ThreadViewer__body { background: var(--kc-conversation) !important; }
+#channel_view, .sidebar--right { background: var(--kc-surface) !important; }
+.post:not(.post--highlight):not(.post--pinned):hover { background: rgba(var(--kc-accent-rgb), 0.04) !important; }
+.post .post__header .user-popover { color: var(--kc-text) !important; font-weight: 650; letter-spacing: -0.012em; }
+.post .post__time { color: var(--kc-muted) !important; font-size: 11px; font-variant-numeric: tabular-nums; opacity: 1; }
+.post:not(.post--system) .post-message__text { line-height: 1.6; }
+.post .post__img .Avatar { border-radius: 10px; }
+.post .attachment { max-width: 960px; }
+.post .attachment .attachment__content {
+  border-color: var(--kc-border) !important;
+  border-radius: 0 11px 11px 0 !important;
+  background: var(--kc-surface) !important;
+  box-shadow: 0 2px 6px rgb(31 35 70 / 4%);
+}
+.post .attachment .attachment__container { padding: 16px 18px; border-left-width: 3px; }
+.post .attachment .attachment__title { color: var(--kc-text); font-weight: 600; }
+.post .attachment .markdown__heading { font-weight: 600; letter-spacing: -0.025em; }
+.post .attachment .attachment__body { color: var(--kc-muted); }
+.app__body .date-separator .separator__text {
+  padding: 5px 12px;
+  border: 1px solid var(--kc-border);
+  border-radius: 8px;
+  background: var(--kc-surface) !important;
+  color: var(--kc-muted) !important;
+  font-size: 11px;
+  font-weight: 600;
+}
+.app__body .post :is(.Reaction, .post-reaction) { border-radius: 7px; }
+.app__body .post code { border-radius: 4px; }
+
+/* Éditeur : surface distincte et focus net. */
+#post-create, .ThreadViewer .post-create__container { padding-top: 8px; background: var(--kc-conversation) !important; }
+.AdvancedTextEditor__body {
+  overflow: visible;
+  border: 1px solid var(--kc-border) !important;
+  border-radius: 13px !important;
+  background: var(--kc-surface) !important;
+  box-shadow: var(--kc-shadow);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.AdvancedTextEditor__body:focus-within {
+  border-color: var(--kc-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--kc-accent-rgb), 0.1), var(--kc-shadow);
+}
+body.app__body .AdvancedTextEditor__body :is(textarea, [contenteditable="true"]):is(:focus, :focus-visible) {
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+.AdvancedTextEditor__body .custom-textarea { color: var(--kc-text) !important; line-height: 20px; }
+.AdvancedTextEditor__body textarea::placeholder { color: var(--kc-muted) !important; opacity: 1; }
+.AdvancedTextEditor__body [class*="FormattingBarContainer-"] {
+  border-radius: 0 0 12px 12px;
+  background: var(--kc-surface) !important;
+}
+.AdvancedTextEditor__body .control { border-radius: 6px; color: var(--kc-muted) !important; }
+.AdvancedTextEditor__body .control:hover { background: var(--kc-hover) !important; color: var(--kc-accent) !important; }
+.splitSendButton { border-radius: 7px !important; }
+body.app__body :is(a.theme, a.markdown__link, .post-message__text a, .color--link, .post-collapse__show-more-button) {
+  color: var(--kc-accent) !important;
+}
+body.app__body .post-collapse__show-more-button:hover {
+  border-color: var(--kc-border);
+  background: var(--kc-accent-soft);
+}
+
+/* Menus, recherche, fils de discussion et réglages. */
+/* Focus intérieur : la zone défilante de Find Channels ne peut plus le couper. */
+body.app__body #quickSwitchModal #quickSwitchInput:is(:focus, :focus-visible) {
+  border-color: var(--kc-accent) !important;
+  outline: 2px solid var(--kc-accent) !important;
+  outline-offset: -2px !important;
+  box-shadow: none !important;
+}
+.app__body :is(.dropdown-menu, .Menu__content.dropdown-menu, .popover) {
+  padding: 6px;
+  border: 1px solid var(--kc-border) !important;
+  border-radius: 12px !important;
+  background: var(--kc-raised) !important;
+  box-shadow: var(--kc-popup-shadow) !important;
+  color: var(--kc-text);
+}
+.app__body :is(.dropdown-menu .MenuItem, .dropdown-menu > li > a) { border-radius: 7px; }
+.app__body :is(.dropdown-menu .MenuItem:hover, .dropdown-menu > li > a:hover) { background: var(--kc-hover) !important; }
+.app__body .btn:not(.btn-round):not(.btn-icon) { border-radius: 8px; font-weight: 600; }
+.app__body .btn-primary:not(:disabled) {
+  border-color: var(--kc-brand) !important;
+  background: var(--kc-brand) !important;
+  color: var(--kc-on-accent) !important;
+}
+.app__body .btn-primary:not(:disabled):hover,
+.splitSendButton:not(.disabled):hover {
+  border-color: var(--kc-blue-700) !important;
+  background: var(--kc-blue-700) !important;
+}
+.app__body .form-control:not(textarea):not(.custom-textarea) {
+  border-color: var(--kc-border);
+  border-radius: 8px;
+  background: var(--kc-surface);
+  color: var(--kc-text);
+}
+.app__body .sidebar--right { border-left: 1px solid var(--kc-border) !important; }
+#settingsTabs .nav-tabs { border-color: var(--kc-border); }
+#settingsTabs .nav-tabs > li > a { color: var(--kc-muted) !important; }
+#settingsTabs .nav-tabs > li.active > a {
+  border-bottom-color: var(--kc-accent) !important;
+  color: var(--kc-accent) !important;
+}
+.accountSettingRhs :is(.settings-title, .rhs-custom-btn-label) { color: var(--kc-text) !important; }
+.accountSettingRhs .settings-desc { color: var(--kc-muted) !important; }
+.accountSettingRhs .rhs-custom-btn {
+  border: 1px solid transparent;
+  border-radius: 11px;
+}
+.accountSettingRhs .rhs-custom-btn.active {
+  border-color: var(--kc-border) !important;
+  background: var(--kc-accent-soft) !important;
+}
+.app__body .btn-toggle { border-radius: 999px !important; }
+.app__body .btn-toggle.active { background: var(--kc-brand) !important; }
+.app__body .react-select__control {
+  border-color: var(--kc-border) !important;
+  border-radius: 8px;
+  background: var(--kc-surface) !important;
+}
+.app__body .react-select__single-value { color: var(--kc-text) !important; }
+.app__body .react-select__menu {
+  border: 1px solid var(--kc-border);
+  border-radius: 10px;
+  background: var(--kc-raised) !important;
+  box-shadow: var(--kc-popup-shadow);
+}
+.app__body .react-select__option--is-focused { background: var(--kc-hover) !important; }
+.app__body .react-select__option--is-selected {
+  background: var(--kc-accent-soft) !important;
+  color: var(--kc-text) !important;
+}
+@media (min-width: 769px) {
+  .app__body .modal-dialog:not(.modal-image) .modal-content {
+    border-color: var(--kc-border) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--kc-popup-shadow) !important;
+  }
+}
+
+/* Éléments Electron : barre des espaces et bandeau de fenêtre. */
+html[data-kchat-shell="spaces"] body, .ServersSidebar { background: var(--kc-rail) !important; }
+.ServersSidebar { border-right: 1px solid rgba(var(--kc-sidebar-text-rgb), 0.08) !important; }
+.ServerButton { border: 0 !important; border-radius: 11px !important; background: rgba(var(--kc-sidebar-text-rgb), 0.08) !important; }
+.ServerButton__content, .ServerButton__image { border-radius: 8px; }
+.ServerButton.active {
+  border: 0 !important;
+  background: var(--kc-sidebar-active) !important;
+  box-shadow: none !important;
+}
+.ServerButton:not(.active):hover { background: var(--kc-sidebar-hover) !important; }
+.ServerButton__initial { color: var(--kc-sidebar-text) !important; font-weight: 600; }
+.topBar > .topBar-bg {
+  border-bottom: 1px solid rgba(var(--kc-sidebar-text-rgb), 0.06);
+  background: var(--kc-rail) !important;
+}
+.topBar > .topBar-bg.unfocused { opacity: 1 !important; }
+.topBar :is(.three-dot-menu, .app-title, .topBar-bg > span) { color: var(--kc-sidebar-text) !important; font-family: var(--kc-font) !important; }
+
+/* Scrollbars et mouvement. */
+body.app__body ::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: rgba(var(--kc-text-rgb), 0.22) !important;
+  background-clip: padding-box !important;
+}
+#SidebarContainer ::-webkit-scrollbar-thumb { background-color: rgba(var(--kc-sidebar-text-rgb), 0.22) !important; }
+@media (max-width: 900px) {
+  .AdvancedTextEditor { padding-inline: 12px; }
+  #channel-header { padding-inline: 12px; }
+  .post .attachment .attachment__container { padding: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.app__body :is(.btn, .SidebarLink, .control), .AdvancedTextEditor__body, .ServerButton { transition: none !important; }
+}
