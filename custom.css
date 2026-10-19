@@ -497,7 +497,7 @@ body.app__body :is(.btn, .SidebarLink, .channel-header__trigger, .control) {
 .post .attachment .attachment__container { padding: 16px 18px; border-left-width: 3px; }
 .post .attachment .attachment__title { color: var(--kc-text); font-weight: 600; }
 .post .attachment .markdown__heading { font-weight: 600; letter-spacing: -0.025em; }
-.post .attachment .attachment__body { color: var(--kc-muted); }
+.post .attachment .attachment__body { color: var(--kc-text); }
 .app__body .date-separator .separator__text {
   padding: 5px 12px;
   border: 1px solid var(--kc-border);
