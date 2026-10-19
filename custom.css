@@ -529,6 +529,11 @@ body.app__body .AdvancedTextEditor__body :is(textarea, [contenteditable="true"])
   outline-offset: 0 !important;
   box-shadow: none !important;
 }
+/* En édition, le textarea natif ne doit pas masquer le contour arrondi. */
+.post-edit__container .AdvancedTextEditor__body .custom-textarea {
+  border-radius: 12px 12px 0 0;
+  background-color: transparent;
+}
 .AdvancedTextEditor__body .custom-textarea { color: var(--kc-text) !important; line-height: 20px; }
 .AdvancedTextEditor__body textarea::placeholder { color: var(--kc-muted) !important; opacity: 1; }
 /* Les threads ajoutent un spacer opaque sous la barre de formatage. */
