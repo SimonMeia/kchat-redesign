@@ -46,6 +46,42 @@ Relancer l'installateur ne duplique pas les liens.
 **Conserver le dépôt à son emplacement** : les liens et le Python du virtualenv
 en dépendent. En cas de déplacement, recréer le virtualenv et relancer l'installateur.
 
+## Lancement automatique à l'ouverture de session
+
+Après l'installation ci-dessus, désactiver le lancement automatique **dans les
+préférences de kChat**. Sinon, l'application peut recréer une entrée qui lance
+la version standard avant l'injecteur CSS.
+
+Exécuter ensuite ces commandes dans Bash pour sauvegarder les anciennes entrées
+kChat et installer le raccourci **kChat (CSS custom)** au démarrage :
+
+```bash
+kc_config="${XDG_CONFIG_HOME:-$HOME/.config}"
+kc_data="${XDG_DATA_HOME:-$HOME/.local/share}"
+kc_autostart="$kc_config/autostart"
+kc_backup="$kc_config/kchat-custom/autostart-backup-$(date +%Y%m%d-%H%M%S)"
+
+if [ -f "$kc_data/applications/kchat-custom-css.desktop" ]; then
+    mkdir -p "$kc_autostart" "$kc_backup"
+    for kc_entry in "$kc_autostart"/kchat*.desktop; do
+        [ -e "$kc_entry" ] || [ -L "$kc_entry" ] || continue
+        mv "$kc_entry" "$kc_backup/"
+    done
+    cp "$kc_data/applications/kchat-custom-css.desktop" "$kc_autostart/"
+else
+    printf '%s\n' "Raccourci absent : exécuter install.py avant cette étape."
+fi
+```
+
+À la prochaine ouverture de session, kChat démarrera avec le CSS personnalisé.
+Garder l'option native de démarrage automatique désactivée. Le démarrage de
+Gear Lever pour rechercher des mises à jour peut rester activé.
+
+Après avoir régénéré le raccourci avec `install.py` (par exemple après un changement
+de chemin), répéter cette procédure pour actualiser aussi sa copie de démarrage.
+Pour désactiver seulement ce lancement automatique, supprimer
+`~/.config/autostart/kchat-custom-css.desktop` (adapter si XDG est personnalisé).
+
 ## Modifier et synchroniser le thème
 
 Modifier `custom.css` dans le dépôt. Lorsque l'injecteur fonctionne, le changement
@@ -114,6 +150,7 @@ liens créés par l'installateur, puis les supprimer :
 rm ~/.config/kchat-custom/custom.css
 rm ~/.local/share/kchat-custom-css/launch.py
 rm ~/.local/share/applications/kchat-custom-css.desktop
+rm -f ~/.config/autostart/kchat-custom-css.desktop
 ```
 
 Adapter les chemins si XDG est personnalisé. Les sauvegardes `.backup-…` peuvent
